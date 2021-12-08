@@ -3,6 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:id="@+id/fav" android:title="Favoritos" />
+
     <item android:id="@+id/menu" android:title="Menús" />
+    <item android:id="@+id/servicios" android:title="Servicios" />
+    <item android:id="@+id/sucursales" android:title="Sucursales" />
+
+    <item android:id="@+id/itemLogin"
+        android:title="Login"
+        android:icon="@drawable/ic_login"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/itemCarrito"
+        android:title="Carrito"
+        android:icon="@drawable/ic_carrito"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/itemFavoritos"
+        android:title="Favoritos"
+        android:icon="@drawable/ic_favorito"
+        app:showAsAction="always"/>
+
+
+
 </menu>

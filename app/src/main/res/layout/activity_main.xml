@@ -7,11 +7,19 @@
     android:orientation="vertical"
     tools:context=".view.MainActivity">
 
+    <ProgressBar
+        android:id="@+id/barraProgreso"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:scrollbarSize="4dp" />
+
     <ImageView
         android:id="@+id/splash"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/splashpic" />
+        android:src="@drawable/maisongourmet" />
 
 </LinearLayout>

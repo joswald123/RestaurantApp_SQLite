@@ -40,6 +40,11 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setLogo(R.mipmap.ic_chef);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
         listaProductos = (ListView)findViewById(R.id.lvwProductos);
 
         ArrayList<Producto> productos = consultarProductos(this);
@@ -76,9 +81,33 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.fav:
+            /*case R.id.fav:
                 Intent intent = new Intent(MenuActivity.this, FavoritosActivity.class);
                 startActivity(intent);
+                return  true;*/
+            case R.id.itemFavoritos:
+                Intent favoritos = new Intent(MenuActivity.this, FavoritosActivity.class);
+                startActivity(favoritos);
+                return  true;
+            case R.id.itemCarrito:
+                Toast.makeText(getApplicationContext(), "Pronto podrás agregar al carrito", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.itemLogin:
+                Intent login = new Intent(this, LoginActivity.class);
+                startActivity(login);
+                return  true;
+            case R.id.menu:
+                Intent menu = new Intent(this, MenuActivity.class);
+                startActivity(menu);
+                //Toast.makeText(getApplicationContext(), "Acá podrás ver el Menú", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.servicios:
+                Intent servicios = new Intent(MenuActivity.this, ServiciosActivity.class);
+                startActivity(servicios);
+                return  true;
+            case R.id.sucursales:
+                Intent sucursales = new Intent(this, SucursalesActivity.class);
+                startActivity(sucursales);
                 return  true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +49,7 @@ public class AdaptadorProductos extends BaseAdapter {
         ImageView itemImagen = (ImageView) vista.findViewById(R.id.itemImage);
         TextView itemNombre = (TextView) vista.findViewById(R.id.itemnombre);
         TextView itemPrecio = (TextView) vista.findViewById(R.id.itemPrecio);
+        //Button btnAnadir = (Button) vista.findViewById(R.id.btnAnadir);
 
         itemImagen.setImageResource(productos.get(posicion).getImagen());
         itemNombre.setText(productos.get(posicion).getNombre());

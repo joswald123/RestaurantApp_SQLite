@@ -5,13 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".view.MenuActivity">
 
-    <ListView
-        android:id="@+id/lvwProductos"
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        />
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Opciones de Menú"
+        android:textAlignment="center"
+        android:fontFamily="@font/dancingscriptbold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#662D15"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lvwProductos"
+            android:layout_width="match_parent"
+            android:layout_height="643dp"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</ScrollView>
+
 
 </LinearLayout>
