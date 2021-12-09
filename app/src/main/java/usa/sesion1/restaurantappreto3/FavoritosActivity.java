@@ -30,7 +30,10 @@ import usa.sesion1.restaurantappreto3.controller.DBLocal;
 import usa.sesion1.restaurantappreto3.controller.MyOpenHelper;
 import usa.sesion1.restaurantappreto3.controller.ProductoController;
 import usa.sesion1.restaurantappreto3.model.Producto;
+import usa.sesion1.restaurantappreto3.view.LoginActivity;
 import usa.sesion1.restaurantappreto3.view.MenuActivity;
+import usa.sesion1.restaurantappreto3.view.ServiciosActivity;
+import usa.sesion1.restaurantappreto3.view.SucursalesActivity;
 
 public class FavoritosActivity extends AppCompatActivity {
 
@@ -60,19 +63,46 @@ public class FavoritosActivity extends AppCompatActivity {
 
     }
 
+    // Barra de menu --- navbar ----
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menudeopciones, menu);
         return true;
     }
 
+    // --- Opciones de la barra de menu ------
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.menu:
-                Intent intent = new Intent(FavoritosActivity.this, MenuActivity.class);
+            /*case R.id.fav:
+                Intent intent = new Intent(MenuActivity.this, FavoritosActivity.class);
                 startActivity(intent);
+                return  true;*/
+            case R.id.itemFavoritos:
+                Intent favoritos = new Intent(FavoritosActivity.this, FavoritosActivity.class);
+                startActivity(favoritos);
+                return  true;
+            case R.id.itemCarrito:
+                Toast.makeText(getApplicationContext(), "Pronto podrás agregar al carrito", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.itemLogin:
+                Intent login = new Intent(this, LoginActivity.class);
+                startActivity(login);
+                return  true;
+            case R.id.menu:
+                Intent menu = new Intent(this, MenuActivity.class);
+                startActivity(menu);
+                //Toast.makeText(getApplicationContext(), "Acá podrás ver el Menú", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.servicios:
+                Intent servicios = new Intent(FavoritosActivity.this, ServiciosActivity.class);
+                startActivity(servicios);
+                return  true;
+            case R.id.sucursales:
+                Intent sucursales = new Intent(this, SucursalesActivity.class);
+                startActivity(sucursales);
                 return  true;
             default:
                 return super.onOptionsItemSelected(item);
