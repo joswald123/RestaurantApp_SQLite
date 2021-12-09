@@ -70,13 +70,14 @@ public class MenuActivity extends AppCompatActivity {
         });
 
     }
-
+    // Barra de menu --- navbar ----
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menudeopciones, menu);
         return true;
     }
 
+    // --- Opciones de la barra de menu ------
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -114,6 +115,7 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
+    // Consultar productos desde la base de datos ------
     public ArrayList<Producto> consultarProductos(Context context){
         ArrayList<Producto> productos = new ArrayList<>();
 
