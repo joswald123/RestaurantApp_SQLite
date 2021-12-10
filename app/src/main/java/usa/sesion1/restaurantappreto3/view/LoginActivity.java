@@ -30,6 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //-------- LOGO ----
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setLogo(R.mipmap.ic_chef);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // ----------------------
+
         //tvwMenu =(TextView)findViewById(tvwMenu);
         edtUsuario =(EditText)findViewById(R.id.edtUsuario);
         edtClave =(EditText)findViewById(R.id.edtClave);

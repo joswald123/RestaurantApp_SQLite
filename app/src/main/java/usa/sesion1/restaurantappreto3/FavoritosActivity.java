@@ -44,6 +44,13 @@ public class FavoritosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
 
+        //-------- LOGO ----
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setLogo(R.mipmap.ic_chef);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // ----------------------
+
         lvwFavoritos = (ListView)findViewById(R.id.lvwProductosFavoritos);
 
         ArrayList<Producto> productos = consultarProductosFavoritos(this);
@@ -69,6 +76,7 @@ public class FavoritosActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menudeopciones, menu);
         return true;
+
     }
 
     // --- Opciones de la barra de menu ------

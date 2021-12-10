@@ -40,10 +40,12 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //-------- LOGO ----
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         getSupportActionBar().setLogo(R.mipmap.ic_chef);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // ----------------------
 
         listaProductos = (ListView)findViewById(R.id.lvwProductos);
 

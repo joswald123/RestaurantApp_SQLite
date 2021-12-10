@@ -19,6 +19,13 @@ public class ServiciosActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicios);
+
+        //-------- LOGO ----
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setLogo(R.mipmap.ic_chef);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // ----------------------
     }
 
     // Barra de menu --- navbar ----
