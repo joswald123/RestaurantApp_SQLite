@@ -7,15 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import usa.sesion1.restaurantappreto3.FavoritosActivity;
 import usa.sesion1.restaurantappreto3.R;
+import usa.sesion1.restaurantappreto3.SucursalesActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //private TextView tvwMenu;
@@ -99,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent servicios = new Intent(LoginActivity.this, ServiciosActivity.class);
                 startActivity(servicios);
                 return  true;
-            case R.id.sucursales:
+            case R.id.suc:
                 Intent sucursales = new Intent(this, SucursalesActivity.class);
                 startActivity(sucursales);
                 return  true;

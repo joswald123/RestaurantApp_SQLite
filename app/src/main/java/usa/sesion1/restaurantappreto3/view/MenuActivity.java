@@ -1,7 +1,6 @@
 package usa.sesion1.restaurantappreto3.view;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
@@ -14,7 +13,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +24,7 @@ import java.util.ArrayList;
 
 import usa.sesion1.restaurantappreto3.FavoritosActivity;
 import usa.sesion1.restaurantappreto3.R;
+import usa.sesion1.restaurantappreto3.SucursalesActivity;
 import usa.sesion1.restaurantappreto3.controller.AdaptadorProductos;
 import usa.sesion1.restaurantappreto3.controller.DBLocal;
 import usa.sesion1.restaurantappreto3.controller.MyOpenHelper;
@@ -108,8 +107,8 @@ public class MenuActivity extends AppCompatActivity {
                 Intent servicios = new Intent(MenuActivity.this, ServiciosActivity.class);
                 startActivity(servicios);
                 return  true;
-            case R.id.sucursales:
-                Intent sucursales = new Intent(this, SucursalesActivity.class);
+            case R.id.suc:
+                Intent sucursales = new Intent(MenuActivity.this, SucursalesActivity.class);
                 startActivity(sucursales);
                 return  true;
             default:

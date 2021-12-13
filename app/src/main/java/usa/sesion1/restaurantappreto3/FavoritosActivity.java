@@ -1,7 +1,6 @@
 package usa.sesion1.restaurantappreto3;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
@@ -14,12 +13,10 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,7 +30,6 @@ import usa.sesion1.restaurantappreto3.model.Producto;
 import usa.sesion1.restaurantappreto3.view.LoginActivity;
 import usa.sesion1.restaurantappreto3.view.MenuActivity;
 import usa.sesion1.restaurantappreto3.view.ServiciosActivity;
-import usa.sesion1.restaurantappreto3.view.SucursalesActivity;
 
 public class FavoritosActivity extends AppCompatActivity {
 
@@ -108,7 +104,7 @@ public class FavoritosActivity extends AppCompatActivity {
                 Intent servicios = new Intent(FavoritosActivity.this, ServiciosActivity.class);
                 startActivity(servicios);
                 return  true;
-            case R.id.sucursales:
+            case R.id.suc:
                 Intent sucursales = new Intent(this, SucursalesActivity.class);
                 startActivity(sucursales);
                 return  true;

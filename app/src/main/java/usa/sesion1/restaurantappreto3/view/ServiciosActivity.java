@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import usa.sesion1.restaurantappreto3.FavoritosActivity;
 import usa.sesion1.restaurantappreto3.R;
+import usa.sesion1.restaurantappreto3.SucursalesActivity;
 
 public class ServiciosActivity extends AppCompatActivity {
 
@@ -65,7 +66,7 @@ public class ServiciosActivity extends AppCompatActivity {
                 Intent servicios = new Intent(ServiciosActivity.this, ServiciosActivity.class);
                 startActivity(servicios);
                 return  true;
-            case R.id.sucursales:
+            case R.id.suc:
                 Intent sucursales = new Intent(this, SucursalesActivity.class);
                 startActivity(sucursales);
                 return  true;
