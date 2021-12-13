@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import org.osmdroid.config.Configuration;
 import org.osmdroid.util.GeoPoint;
@@ -80,26 +81,51 @@ public class MapActivity extends AppCompatActivity {
         myOpenMapView.getOverlays().add(capa);
     }
 
+    // Barra de menu --- navbar ----
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menudeopciones, menu);
         return true;
+
     }
 
+    // --- Opciones de la barra de menu ------
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            /*case R.id.pro:
-                Intent intent = new Intent(MapActivity.this, CatalogoActivity.class);
+            /*case R.id.fav:
+                Intent intent = new Intent(MenuActivity.this, FavoritosActivity.class);
                 startActivity(intent);
-                return true;*/
+                return  true;*/
+            case R.id.itemFavoritos:
+                Intent favoritos = new Intent(MapActivity.this, FavoritosActivity.class);
+                startActivity(favoritos);
+                return  true;
+            case R.id.itemCarrito:
+                Toast.makeText(getApplicationContext(), "Pronto podrás agregar al carrito", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.itemLogin:
+                Intent login = new Intent(this, LoginActivity.class);
+                startActivity(login);
+                return  true;
+            case R.id.menu:
+                Intent menu = new Intent(this, MenuActivity.class);
+                startActivity(menu);
+                //Toast.makeText(getApplicationContext(), "Acá podrás ver el Menú", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.servicios:
+                Intent servicios = new Intent(MapActivity.this, ServiciosActivity.class);
+                startActivity(servicios);
+                return  true;
             case R.id.suc:
-                Intent intent2 = new Intent(MapActivity.this, SucursalesActivity.class);
-                startActivity(intent2);
-                return true;
+                Intent sucursales = new Intent(this, SucursalesActivity.class);
+                startActivity(sucursales);
+                return  true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+    // -_____________________________________________________________
 }

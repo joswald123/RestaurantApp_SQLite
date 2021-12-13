@@ -15,7 +15,7 @@ import usa.sesion1.restaurantappreto3.model.Sucursal;
 
 public class MyOpenHelper extends SQLiteOpenHelper {
 
-    public static int VERSION = 11;
+    public static int VERSION = 12;
 
     public MyOpenHelper(@Nullable Context context) {
         super(context, DBLocal.DATABASE_NAME, null, VERSION);

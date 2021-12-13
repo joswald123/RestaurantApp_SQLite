@@ -8,8 +8,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +24,10 @@ import usa.sesion1.restaurantappreto3.controller.AdaptadorSucursales;
 import usa.sesion1.restaurantappreto3.controller.DBLocal;
 import usa.sesion1.restaurantappreto3.controller.MyOpenHelper;
 import usa.sesion1.restaurantappreto3.model.Sucursal;
+import usa.sesion1.restaurantappreto3.view.LoginActivity;
 import usa.sesion1.restaurantappreto3.view.MapActivity;
+import usa.sesion1.restaurantappreto3.view.MenuActivity;
+import usa.sesion1.restaurantappreto3.view.ServiciosActivity;
 
 public class SucursalesActivity extends AppCompatActivity {
 
@@ -32,6 +39,13 @@ public class SucursalesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sucursales);
+
+        //-------- LOGO ----
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setLogo(R.mipmap.ic_chef);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        // ----------------------
 
         rcvSucursales = (RecyclerView) findViewById(R.id.rcvSucursales);
         rcvSucursales.setLayoutManager(new LinearLayoutManager(this));
@@ -45,6 +59,56 @@ public class SucursalesActivity extends AppCompatActivity {
         new ConsultarSucursales().execute();
 
     }
+
+
+    // Barra de menu --- navbar ----
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menudeopciones, menu);
+        return true;
+
+    }
+
+    // --- Opciones de la barra de menu ------
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            /*case R.id.fav:
+                Intent intent = new Intent(MenuActivity.this, FavoritosActivity.class);
+                startActivity(intent);
+                return  true;*/
+            case R.id.itemFavoritos:
+                Intent favoritos = new Intent(SucursalesActivity.this, FavoritosActivity.class);
+                startActivity(favoritos);
+                return  true;
+            case R.id.itemCarrito:
+                Toast.makeText(getApplicationContext(), "Pronto podrás agregar al carrito", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.itemLogin:
+                Intent login = new Intent(this, LoginActivity.class);
+                startActivity(login);
+                return  true;
+            case R.id.menu:
+                Intent menu = new Intent(this, MenuActivity.class);
+                startActivity(menu);
+                //Toast.makeText(getApplicationContext(), "Acá podrás ver el Menú", Toast.LENGTH_LONG).show();
+                return  true;
+            case R.id.servicios:
+                Intent servicios = new Intent(SucursalesActivity.this, ServiciosActivity.class);
+                startActivity(servicios);
+                return  true;
+            case R.id.suc:
+                Intent sucursales = new Intent(this, SucursalesActivity.class);
+                startActivity(sucursales);
+                return  true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    // -----------------------------------------------------
 
     public class ConsultarSucursales extends AsyncTask<Void, Void, Void> {
 
