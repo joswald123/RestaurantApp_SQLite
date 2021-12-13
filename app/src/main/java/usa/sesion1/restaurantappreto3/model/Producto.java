@@ -3,18 +3,18 @@ package usa.sesion1.restaurantappreto3.model;
 public class Producto {
     private int id;
     private String nombre;
-    private int precio;
+    private String precio;
     private int imagen;
     private boolean favorito;
 
-    public Producto(int id, String nombre, int precio) {
+    public Producto(int id, String nombre, String precio) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.favorito = false;
     }
 
-    public Producto(int id, String nombre, int precio, int imagen) {
+    public Producto(int id, String nombre, String precio, int imagen) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -22,7 +22,7 @@ public class Producto {
         this.favorito = false;
     }
 
-    public Producto(int id, String nombre, int precio, int imagen, boolean favorito) {
+    public Producto(int id, String nombre, String precio, int imagen, boolean favorito) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -30,14 +30,14 @@ public class Producto {
         this.favorito = favorito;
     }
 
-    public Producto(String nombre, int precio, int imagen) {
+    public Producto(String nombre, String precio, int imagen) {
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
         this.favorito = false;
     }
 
-    public Producto(String nombre, int precio, int imagen, boolean favorito) {
+    public Producto(String nombre, String precio, int imagen, boolean favorito) {
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
@@ -76,11 +76,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 }

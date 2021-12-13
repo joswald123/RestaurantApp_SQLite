@@ -58,14 +58,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long l) {
                 Producto p = (Producto) adapterView.getItemAtPosition(posicion);
                 dialogo(p.getId());
-                /*
-                Intent intent = new Intent(MainActivity.this, DetalleProductoActivity.class);
-                intent.putExtra("id", p.getId());
-                intent.putExtra("nombre", p.getNombre());
-                intent.putExtra("precio", p.getPrecio());
-                startActivity(intent);
-
-                 */
 
             }
         });
@@ -128,7 +120,7 @@ public class MenuActivity extends AppCompatActivity {
         while (c.moveToNext()){
             @SuppressLint("Range") int id = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.ID));
             @SuppressLint("Range") String nombre = c.getString(c.getColumnIndex(DBLocal.TB_PRODUCTOS.NOMBRE));
-            @SuppressLint("Range") int precio = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.PRECIO));
+            @SuppressLint("Range") String precio = c.getString(c.getColumnIndex(DBLocal.TB_PRODUCTOS.PRECIO));
             @SuppressLint("Range") int imagen = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.IMAGEN));
             @SuppressLint("Range") int favorito = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.FAVORITO));
 
