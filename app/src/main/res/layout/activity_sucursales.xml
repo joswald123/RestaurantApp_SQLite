@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context=".SucursalesActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Sucursales"
+        android:textAlignment="center"
+        android:fontFamily="@font/dancingscriptbold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#662D15"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvSucursales"
         android:layout_width="match_parent"
