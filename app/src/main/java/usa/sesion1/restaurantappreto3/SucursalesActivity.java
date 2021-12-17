@@ -123,6 +123,7 @@ public class SucursalesActivity extends AppCompatActivity {
     public void getWebserviceSucursales(){
         String url = WEBSERVICE.GET_POST_PUT_DELETE_SUCURSALES;
 
+        sucursales = new ArrayList<>();
         // --------------------- Barra de progreso ---------------------------------
         ProgressDialog barraProgreso = new ProgressDialog(SucursalesActivity.this);
         barraProgreso.setCancelable(true);
