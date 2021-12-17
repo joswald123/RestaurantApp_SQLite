@@ -7,9 +7,9 @@ public class Sucursal {
     private String direccion;
     private double latitud;
     private double longitud;
-    private int imagen;
+    private String  imagen;
 
-    public Sucursal(int id, String nombre, String direccion, double latitud, double longitud, int imagen) {
+    public Sucursal(int id, String nombre, String direccion, double latitud, double longitud, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -18,7 +18,7 @@ public class Sucursal {
         this.imagen = imagen;
     }
 
-    public Sucursal(String nombre, String direccion, double latitud, double longitud, int imagen) {
+    public Sucursal(String nombre, String direccion, double latitud, double longitud, String imagen) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.latitud = latitud;
@@ -66,11 +66,11 @@ public class Sucursal {
         this.longitud = longitud;
     }
 
-    public int getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 }

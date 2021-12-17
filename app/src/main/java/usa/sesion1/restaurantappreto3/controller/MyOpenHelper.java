@@ -30,10 +30,10 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             insertarProducto(p, db);
         }
 
-        ArrayList<Sucursal> sucursales = Container.getSucursales();
-        for(Sucursal s:sucursales){
-            insertarSucursales(s, db);
-        }
+//        ArrayList<Sucursal> sucursales = Container.getSucursales();
+//        for(Sucursal s:sucursales){
+//            insertarSucursales(s, db);
+//        }
     }
 
     @Override

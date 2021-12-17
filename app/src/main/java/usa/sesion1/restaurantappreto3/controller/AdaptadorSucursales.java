@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import usa.sesion1.restaurantappreto3.R;
@@ -35,7 +37,8 @@ public class AdaptadorSucursales
 
     @Override
     public void onBindViewHolder(AdaptadorSucursales.ViewHolderSucursales holder, int position) {
-        holder.imvImagenSuc.setImageResource(sucursales.get(position).getImagen());
+        Picasso.get().load(sucursales.get(position).getImagen()).into(holder.imvImagenSuc);
+        //holder.imvImagenSuc.setImageResource(sucursales.get(position).getImagen());
         holder.tvwNombreSuc.setText(sucursales.get(position).getNombre());
         holder.tvwDireccionSuc.setText(sucursales.get(position).getDireccion());
     }
