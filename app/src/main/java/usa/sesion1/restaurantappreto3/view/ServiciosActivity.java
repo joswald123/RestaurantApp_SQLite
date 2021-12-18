@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,6 +18,7 @@ import usa.sesion1.restaurantappreto3.SucursalesActivity;
 
 public class ServiciosActivity extends AppCompatActivity {
 
+    private Button btnWhatsapp;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,15 @@ public class ServiciosActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_chef);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         // ----------------------
+        // BOTON WHATSAPP
+        btnWhatsapp =(Button) findViewById(R.id.btnWhatsapp);
+
+        btnWhatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Pronto podrás contactarnos", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     // Barra de menu --- navbar ----

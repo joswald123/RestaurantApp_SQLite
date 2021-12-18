@@ -144,7 +144,7 @@ public class MenuActivity extends AppCompatActivity {
                                 JSONObject jsonObject = arrayProducto.getJSONObject(i);
                                 int id = jsonObject.getInt("id");
                                 String nombre = jsonObject.getString("nombre");
-                                String precio= jsonObject.getString("producto");
+                                String precio= jsonObject.getString("precio");
                                 String imagen = jsonObject.getString("imagen");
                                 prodTemp = new Producto(id, nombre, precio, imagen);
                                 productos.add(prodTemp);

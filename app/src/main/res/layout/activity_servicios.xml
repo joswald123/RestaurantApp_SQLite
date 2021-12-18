@@ -29,7 +29,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/dancingscriptbold"
-                    android:paddingTop="15dp"
+                    android:paddingTop="10dp"
                     android:text="Nos encargaremos de la comida en tus eventos"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -41,7 +41,7 @@
                     android:id="@+id/imgCena"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-80dp"
+                    android:layout_marginTop="-85dp"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:src="@drawable/cena" />
@@ -59,19 +59,20 @@
                     android:id="@+id/tvwMenus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
                     android:fontFamily="@font/dancingscriptbold"
                     android:text="Menú para toda ocación"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="#662D15"
-                    android:textSize="35sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgMenus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-80dp"
+                    android:layout_marginTop="-85dp"
                     android:layout_marginBottom="-70dp"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -81,13 +82,24 @@
                     android:id="@+id/tvwMenus2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
                     android:fontFamily="@font/robotoregular"
                     android:text="Contáctanos y hablemos del menú"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/menu"
-                    android:textSize="22sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/whatsapp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="✅ Conversar con un Asesor" />
 
 
             </LinearLayout>
