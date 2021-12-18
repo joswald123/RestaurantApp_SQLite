@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import usa.sesion1.restaurantappreto3.R;
@@ -51,7 +53,8 @@ public class AdaptadorProductos extends BaseAdapter {
         TextView itemPrecio = (TextView) vista.findViewById(R.id.itemPrecio);
         //Button btnAnadir = (Button) vista.findViewById(R.id.btnAnadir);
 
-        itemImagen.setImageResource(productos.get(posicion).getImagen());
+        Picasso.get().load(productos.get(posicion).getImagen()).into(itemImagen);
+        //itemImagen.setImageResource(productos.get(posicion).getImagen());
         itemNombre.setText(productos.get(posicion).getNombre());
         itemPrecio.setText("" + productos.get(posicion).getPrecio());
 

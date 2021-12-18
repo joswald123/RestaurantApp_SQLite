@@ -45,7 +45,6 @@ public class SucursalesActivity extends AppCompatActivity {
 
     RecyclerView rcvSucursales;
     //ArrayList<Sucursal> sucursales;
-    ProgressDialog barraProgreso;
     ArrayList<Sucursal> sucursales;
 
     @Override

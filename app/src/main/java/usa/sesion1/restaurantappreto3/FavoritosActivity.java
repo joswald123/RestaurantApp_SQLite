@@ -125,7 +125,7 @@ public class FavoritosActivity extends AppCompatActivity {
             @SuppressLint("Range") int id = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.ID));
             @SuppressLint("Range") String nombre = c.getString(c.getColumnIndex(DBLocal.TB_PRODUCTOS.NOMBRE));
             @SuppressLint("Range") String precio = c.getString(c.getColumnIndex(DBLocal.TB_PRODUCTOS.PRECIO));
-            @SuppressLint("Range") int imagen = c.getInt(c.getColumnIndex(DBLocal.TB_PRODUCTOS.IMAGEN));
+            @SuppressLint("Range") String imagen = c.getString(c.getColumnIndex(DBLocal.TB_PRODUCTOS.IMAGEN));
 
             productos.add(new Producto(id, nombre, precio, imagen));
 

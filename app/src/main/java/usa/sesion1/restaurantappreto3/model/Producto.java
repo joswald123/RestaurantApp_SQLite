@@ -4,7 +4,7 @@ public class Producto {
     private int id;
     private String nombre;
     private String precio;
-    private int imagen;
+    private String imagen;
     private boolean favorito;
 
     public Producto(int id, String nombre, String precio) {
@@ -14,7 +14,7 @@ public class Producto {
         this.favorito = false;
     }
 
-    public Producto(int id, String nombre, String precio, int imagen) {
+    public Producto(int id, String nombre, String precio, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -22,7 +22,7 @@ public class Producto {
         this.favorito = false;
     }
 
-    public Producto(int id, String nombre, String precio, int imagen, boolean favorito) {
+    public Producto(int id, String nombre, String precio, String imagen, boolean favorito) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -30,14 +30,14 @@ public class Producto {
         this.favorito = favorito;
     }
 
-    public Producto(String nombre, String precio, int imagen) {
+    public Producto(String nombre, String precio, String imagen) {
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
         this.favorito = false;
     }
 
-    public Producto(String nombre, String precio, int imagen, boolean favorito) {
+    public Producto(String nombre, String precio, String imagen, boolean favorito) {
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
@@ -52,11 +52,11 @@ public class Producto {
         this.favorito = favorito;
     }
 
-    public int getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

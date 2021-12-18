@@ -25,10 +25,10 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         crearTablaProductos(db);
         crearTablaSucursales(db);
-        ArrayList <Producto> productos = Container.getProductos();
-        for(Producto p : productos){
-            insertarProducto(p, db);
-        }
+//        ArrayList <Producto> productos = Container.getProductos();
+//        for(Producto p : productos){
+//            insertarProducto(p, db);
+//        }
 
 //        ArrayList<Sucursal> sucursales = Container.getSucursales();
 //        for(Sucursal s:sucursales){
