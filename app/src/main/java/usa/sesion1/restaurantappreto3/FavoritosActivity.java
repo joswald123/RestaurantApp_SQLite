@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,7 +34,7 @@ import usa.sesion1.restaurantappreto3.view.ServiciosActivity;
 public class FavoritosActivity extends AppCompatActivity {
 
     ListView lvwFavoritos;
-    private Button btnCarrito;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,14 +46,6 @@ public class FavoritosActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_chef);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         // ----------------------
-        btnCarrito =(Button) findViewById(R.id.btnCarrito);
-
-        btnCarrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Pronto podrás agregar al carrito", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         lvwFavoritos = (ListView)findViewById(R.id.lvwProductosFavoritos);
 
