@@ -17,4 +17,4 @@ This app offers its customers the possibility of storing their favorite products
 customer favorites, where it is evidenced that you save, delete, and update these products (CRUD).
 4. The Google maps API is used to show the location of the restaurant branches.
 
-![Home Page Screen](client/src/assets/images/Capture1.PNG)
+
